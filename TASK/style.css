@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.draggable {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e0e0e0;
+  border: 1px solid #aaa;
+  cursor: grab;
+  text-align: center;
+}
+
+/* Main canvas */
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.canvas {
+  border: 2px dashed #aaa;
+  height: 90%;
+  padding: 10px;
+  overflow: auto;
+  background-color: #fafafa;
+}
+
+/* Editor Panel */
+.editor {
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.editor h2 {
+  margin-bottom: 15px;
+}
+
+.editor form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.editor form input[type='text'],
+.editor form input[type='number'],
+.editor form input[type='color'] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.editor form button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.editor form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar, .editor {
+    width: 100%;
+    border: none;
+  }
+
+  .main {
+    order: -1;
+  }
+
+  .canvas {
+    height: 300px;
+  }
+}
