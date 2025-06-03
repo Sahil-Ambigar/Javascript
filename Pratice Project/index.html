@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechVerse-Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Website Builder</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>TechVerse</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contacct</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>Latest Articles</h2>
-
-            <article>
-                <header> 
-                    <h3>How javascript works behind the scenes</h3>
-                    <p>Published on <time datetime="2025-05-28">May 28,2025</time></p>
-                </header>
-                <figure>
-                    <img src="C:\Users\justs\Downloads.jpeg" alt="javascript blog cover" width="300">
-                    <figcaption>A deep dive into the JS engine</figcaption>
-                </figure>
-                <p>Explore the internal of Javascript- call stack, event loop, and how async operations work.</p>
-                <a href="blog.html">Read More</a>
-            </article>
-
-            <article>
-                <header>
-                    <h3> Understanding semantic HTML</h3>
-                    <P>Published on <time datetime="2025-05-25">May,25</time></P>      
-                </header>
-                <p>Why semantic HTML matters for accessibility, SEO, and clean code.</p>
-                <a href="blog.html">Read More</a>
-            </article>
-        </section>
-    </main>
-    <aside>
-        <h3>Categories</h3>
-        <ul>
-            <li>Javascript</li>
-            <li>HTML & CSS</li>
-            <li>Web design</li>
-        </ul>
+  <div class="container">
+    
+    <aside class="sidebar">
+      <h2>Elements</h2>
+      <div class="draggable" draggable="true" data-type="text">Text</div>
+      <div class="draggable" draggable="true" data-type="image">Image</div>
+      <div class="draggable" draggable="true" data-type="button">Button</div>
     </aside>
 
-    <footer>
-        <p> 2025 TechVerse. All rights reserved.</p>
-        <address>
-            contact us at <a href="mailto:techverse@gmail.com">techverse@gmail.com</a>
-        </address>
-    </footer>
+    
+    <main class="main">
+      <h2>Canvas</h2>
+      <div id="canvas" class="canvas" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </main>
+
+    
+    <aside class="editor">
+      <h2>Editor</h2>
+      <form id="editorForm">
+        <label>Text / URL:
+          <input type="text" id="editContent" />
+        </label>
+        <label>Font Size:
+          <input type="number" id="fontSize" />
+        </label>
+        <label>Text Color:
+          <input type="color" id="textColor" />
+        </label>
+        <label>Background Color:
+          <input type="color" id="bgColor" />
+        </label>
+        <button type="submit">Apply</button>
+      </form>
+    </aside>
+  </div>
+
+  
+  <script src="script.js"></script>
 </body>
 </html>

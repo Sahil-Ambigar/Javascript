@@ -1,0 +1,124 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+}
+
+
+.draggable {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #999;
+  cursor: grab;
+  user-select: none;
+}
+
+
+.main {
+  width: 60%;
+  padding: 1rem;
+}
+
+
+.canvas {
+  border: 2px dashed #aaa;
+  min-height: 80vh;
+  background-color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+
+.editor {
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-left: 1px solid #ccc;
+}
+
+
+.editor h2 {
+  margin-bottom: 1rem;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+label {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="color"] {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+button {
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.selected {
+  outline: 2px solid blue;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar, .main, .editor {
+    width: 100%;
+  }
+
+  .canvas {
+    min-height: 60vh;
+  }
+}
